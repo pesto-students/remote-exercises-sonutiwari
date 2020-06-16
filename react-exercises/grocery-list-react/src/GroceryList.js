@@ -17,6 +17,7 @@ class GroceryList extends React.Component {
   }
   addGrocery() {
     const value = this.state.inputValue;
+    if (!value) return;
     const currentFreq = this.state.groceryList.get(value);
     this.setState({
       ...this.state,
